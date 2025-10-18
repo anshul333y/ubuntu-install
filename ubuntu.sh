@@ -2,6 +2,10 @@
 
 printf '\033c'
 
+# configure grub with custom boot params
+sudo sed -i 's/quiet/pci=noaer/' /etc/default/grub
+sudo sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=true/' /etc/default/grub
+
 # installing apt packages
 sudo apt install -y cronie curl zsh git stow unzip \
   python3-venv imagemagick \
