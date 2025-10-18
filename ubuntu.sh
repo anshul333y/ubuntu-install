@@ -40,6 +40,11 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 git clone https://github.com/anshul333y/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles && stow . && cd
 
+# loading dconf
+dconf load / <~/.config/gnome/gnome.dconf
+powerprofilesctl set performance
+python3 -m venv ~/.python-venv && source ~/.python-venv/bin/activate && pip install pywal
+
 # installing oh-my-zsh with plugins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
