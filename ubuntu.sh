@@ -3,7 +3,7 @@
 printf '\033c'
 
 # configure grub with custom boot params
-sudo sed -i 's/quiet/pci=noaer/' /etc/default/grub
+sudo sed -i 's/quiet splash/pci=noaer/' /etc/default/grub
 sudo sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=true/' /etc/default/grub
 
 # allow sudo group to use sudo without a password
